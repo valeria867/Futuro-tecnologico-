@@ -1,0 +1,274 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Futuro Tecnológico</title>
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body{
+            background: #050816;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        header{
+            text-align: center;
+            padding: 40px;
+        }
+
+        header h1{
+            font-size: 60px;
+            color: cyan;
+            text-shadow: 0px 0px 20px cyan;
+            margin-bottom: 15px;
+        }
+
+        header p{
+            color: #cfcfcf;
+            font-size: 20px;
+        }
+
+        .contenedor{
+            width: 90%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+            gap: 30px;
+            padding-bottom: 50px;
+        }
+
+        .card{
+            background: #111827;
+            border-radius: 20px;
+            overflow: hidden;
+            transition: 0.4s;
+            box-shadow: 0px 0px 20px rgba(0,255,255,0.2);
+        }
+
+        .card:hover{
+            transform: scale(1.05);
+            box-shadow: 0px 0px 30px cyan;
+        }
+
+        .card img{
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .contenido{
+            padding: 20px;
+        }
+
+        .contenido h2{
+            color: cyan;
+            margin-bottom: 15px;
+            font-size: 28px;
+        }
+
+        .contenido p{
+            color: #dcdcdc;
+            line-height: 1.6;
+        }
+
+        /* ENCUESTA */
+
+        .encuesta{
+            width: 80%;
+            margin: 40px auto;
+            background: #111827;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0px 0px 20px rgba(0,255,255,0.2);
+            text-align: center;
+        }
+
+        .encuesta h2{
+            color: cyan;
+            margin-bottom: 20px;
+            font-size: 35px;
+        }
+
+        .estrellas{
+            font-size: 40px;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+
+        .estrella{
+            color: gray;
+            transition: 0.3s;
+        }
+
+        .estrella:hover,
+        .estrella.activa{
+            color: gold;
+            text-shadow: 0px 0px 10px gold;
+        }
+
+        textarea{
+            width: 100%;
+            height: 120px;
+            border: none;
+            border-radius: 10px;
+            padding: 15px;
+            font-size: 16px;
+            margin-top: 15px;
+            resize: none;
+            background: #1f2937;
+            color: white;
+        }
+
+        .mensaje{
+            margin-top: 20px;
+            color: cyan;
+            font-size: 20px;
+        }
+
+        footer{
+            text-align: center;
+            padding: 20px;
+            color: gray;
+            font-size: 14px;
+        }
+
+        @media(max-width:768px){
+
+            header h1{
+                font-size: 40px;
+            }
+
+            .encuesta{
+                width: 95%;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>FUTURO TECNOLÓGICO</h1>
+        <p>Los últimos adelantos de la tecnología moderna</p>
+    </header>
+
+    <section class="contenedor">
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1200&auto=format&fit=crop">
+
+            <div class="contenido">
+                <h2>Inteligencia Artificial</h2>
+
+                <p>
+                    La inteligencia artificial está revolucionando la medicina,
+                    educación y entretenimiento mediante sistemas capaces de aprender
+                    y generar contenido automáticamente.
+                </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop">
+
+            <div class="contenido">
+                <h2>Computación Cuántica</h2>
+
+                <p>
+                    Las computadoras cuánticas prometen resolver problemas complejos
+                    millones de veces más rápido que los computadores tradicionales.
+                </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=1200&auto=format&fit=crop">
+
+            <div class="contenido">
+                <h2>Robótica Avanzada</h2>
+
+                <p>
+                    Los robots modernos ya ayudan en hospitales, fábricas y exploraciones
+                    espaciales gracias a sensores inteligentes.
+                </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1626379953822-baec19c3accd?q=80&w=1200&auto=format&fit=crop">
+
+            <div class="contenido">
+                <h2>Realidad Virtual</h2>
+
+                <p>
+                    La realidad virtual y aumentada está cambiando la manera
+                    en que aprendemos, jugamos y trabajamos.
+                </p>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="encuesta">
+
+        <h2>Califica esta interfaz</h2>
+
+        <div class="estrellas">
+
+            <span class="estrella" onclick="calificar(1)">★</span>
+            <span class="estrella" onclick="calificar(2)">★</span>
+            <span class="estrella" onclick="calificar(3)">★</span>
+            <span class="estrella" onclick="calificar(4)">★</span>
+            <span class="estrella" onclick="calificar(5)">★</span>
+
+        </div>
+
+        <textarea placeholder="Escribe tu opinión sobre la interfaz..."></textarea>
+
+        <div class="mensaje" id="mensaje"></div>
+
+    </section>
+
+    <footer>
+        Interfaz futurista sobre tecnología 2026
+    </footer>
+
+    <script>
+
+        function calificar(numero){
+
+            let estrellas = document.querySelectorAll(".estrella");
+
+            estrellas.forEach((estrella, index) => {
+
+                if(index < numero){
+                    estrella.classList.add("activa");
+                } else {
+                    estrella.classList.remove("activa");
+                }
+
+            });
+
+            document.getElementById("mensaje").innerHTML =
+                "Gracias por calificar con " + numero + " estrellas ⭐";
+
+        }
+
+    </script>
+
+</body>
+</html>
+```
